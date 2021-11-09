@@ -7,11 +7,6 @@ app.get('/usuarios', (req, res) => {
 
 })
 
-app.get('/tarefas', (req, res) => {
-    res.send('Rota ativada com GET e recurso tarefa: valores de tarefa devem ser retornados')
-  
-  })
-
 
 
 app.listen(port, () => {
