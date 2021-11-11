@@ -1,23 +1,27 @@
 const express = require('express')
 
-const usuarios = require ("./controllers/UsersControllers/UsersControllers.js")
-const tarefas = require ("./controllers/TaskControllers/TaskControllers.js")
+const UsersControllers = require ("./controllers/UsersControllers/UsersControllers.js")
+const TasksControllers = require ("./controllers/TaskControllers/TaskControllers.js")
 
-const { PORT, APP_NAME } = require ("./util/appConfig")
+const { PORT } = require ("./util/appConfig")
 
 const app = express()
 
+const users = new UsersControllers();
+const tasks = new TasksControllers();
 
 app.get('/', (req, res) => {
-  res.send(`${APP_NAME}`)
+  res.send("TO AQUI")
 
 })
 
-app.get("/usuarios", usuarios)
-app.get("/tarefas", tarefas)
+app.get("/users", users.show)
+app.post("/users", users.save)
+
+app.get("/tasks", tasks.show)
 
 
 app.listen(PORT, () => {
-  console.log(`${APP_NAME} listening at http://localhost:${PORT}`)
+  console.log(` listening at http://localhost:${PORT}`)
 })
 

@@ -1,6 +1,11 @@
-function tarefas(req, res) {
-    res.send('Rota ativada com GET e recurso usuario: valores de usuario devem ser retornados')
+class TaskControllers {
+    show =(req, res) => {
+    res.send('Rota ativada com GET e recurso tarefa: valores de tarefa devem ser retornados')
+}
+    save = (req, res) => {
+    res.send ("testando post tasks")
+};
 }
 
 
-module.exports = tarefas;
+module.exports = TaskControllers;
