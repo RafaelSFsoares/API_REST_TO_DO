@@ -9,13 +9,14 @@
   },
   "keywords": [
     "node",
-    "express"    
+    "express"
   ],
   "author": "Rafael Soares",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mysql2": "^2.3.3-rc.0"
+    "mysql2": "^2.3.3-rc.0",
+    "uuidv4": "^6.2.12"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
