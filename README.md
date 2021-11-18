@@ -7,17 +7,15 @@
 
 User { ID,
           Nome,
-          Email,
-          DataNascimento,
+          Email,         
           Senha }
 
 <h2>Entidade Task</h2>
 
 
-Task { ID,
-         Nome,
+Task { 
+         Titulo,
          DataCriação,
-         DataTermino,
-         Descrição,
-         ID_Usuário,
-         Status }
+         Status,
+         Descrição        
+          }
