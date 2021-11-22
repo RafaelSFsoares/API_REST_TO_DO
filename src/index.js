@@ -35,6 +35,7 @@ app.get("/users/:nome", UserControllers.show)
 app.post("/users", UserControllers.index) // fazer o index la na UsersControllers
 app.post("/users", UserControllers.save)
 app.delete("/users/:nome", UserControllers.remove)
+app.put("/users/:nome", UserControllers.update)//precisa ser adicionado no controllers
 
 
 app.get("/tasks/:titulo", TaskControllers.show)
